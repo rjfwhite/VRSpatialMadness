@@ -1,4 +1,4 @@
-using Assets.Gamelogic.Core;
+using Assets.EntityTemplates;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,7 +11,7 @@ namespace Assets.Editor
         {
             var path = Application.dataPath + "/../../../snapshots/initial_world.snapshot";
             var snapshotBuilder = new SnapshotBuilder(path);
-            snapshotBuilder.Add(EntityTemplates.CoordinatorEntityTemplate());
+            snapshotBuilder.Add(EntityTemplateFactory.ExampleEntity());
             snapshotBuilder.SaveSnapshot();
         }
     }
