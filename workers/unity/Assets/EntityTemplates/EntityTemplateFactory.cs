@@ -1,8 +1,8 @@
 ﻿using Improbable.General;
-using Improbable.Worker;
 using Improbable.Math;
 using Improbable.Player;
 using Improbable.Unity.Core.Acls;
+using Improbable.Worker;
 
 namespace Assets.EntityTemplates
 {
@@ -30,12 +30,27 @@ namespace Assets.EntityTemplates
             var entity = new SnapshotEntity { Prefab = "Ball" };
 
             entity.Add(new Position.Data(position));
-            entity.Add(new Name.Data(new NameData("ball")));
+
+            var acl = Acl.Build()
+                .SetReadAccess(CommonPredicates.PhysicsOrVisual)
+                .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly);
+            
+            entity.SetAcl(acl);
+
+            return entity;
+        }
+
+        public static SnapshotEntity FloorTile(Coordinates position)
+        {
+            var entity = new SnapshotEntity { Prefab = "FloorTile" };
+
+            entity.Add(new Position.Data(position));
+            entity.Add(new Colour.Data(new Vector3f(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value)));
 
             var acl = Acl.Build()
                 .SetReadAccess(CommonPredicates.PhysicsOrVisual)
                 .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<Name>(CommonPredicates.VisualOnly);
+                .SetWriteAccess<Colour>(CommonPredicates.PhysicsOnly);
 
             entity.SetAcl(acl);
 
