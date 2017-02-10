@@ -6,7 +6,7 @@ using Improbable.Unity.Visualizer;
 namespace Assets.Gamelogic.Behaviours
 {
     // This MonoBehaviour will be enabled on both client and server-side workers
-    public class TransformReceiver : MonoBehaviour
+    public class TransformVisualizer : MonoBehaviour
     {
         // Inject access to the entity's WorldTransform component
         [Require]
