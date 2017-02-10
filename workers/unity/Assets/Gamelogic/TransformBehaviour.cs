@@ -10,11 +10,11 @@ namespace Assets.Gamelogic.Behaviours
     {
         // Inject access to the entity's WorldTransform component
         [Require]
-        private WorldTransform.Writer WorldTransformReader;
+        private Position.Writer WorldTransformReader;
 
         private void Update()
         {
-            WorldTransformReader.Send(new WorldTransform.Update().SetPosition(new Coordinates(transform.position.x, transform.position.y, transform.position.z)));
+            WorldTransformReader.Send(new Position.Update().SetPosition(new Coordinates(transform.position.x, transform.position.y, transform.position.z)));
         }
     }
 }

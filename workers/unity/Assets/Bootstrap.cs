@@ -38,7 +38,7 @@ public class Bootstrap : MonoBehaviour
         if(SpatialOS.Configuration.EnginePlatform == EnginePlatform.Client)
         {
             Debug.Log("SPAWN ME A PLAYER m888");
-            SpatialOS.WorkerCommands.CreateEntity("Player", ExampleEntityTemplate.GenerateMyPlayer(), result =>
+            SpatialOS.WorkerCommands.CreateEntity("Player", EntityTemplateFactory.GenerateMyPlayer(), result =>
             {
                 Debug.Log(result.ErrorMessage);
             });
