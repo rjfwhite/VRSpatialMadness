@@ -10,19 +10,36 @@ namespace Assets.EntityTemplates
     {
         public static SnapshotEntity ExampleEntity()
         {
-            var exampleEntity = new SnapshotEntity { Prefab = "ExampleEntity" };
+            var entity = new SnapshotEntity { Prefab = "ExampleEntity" };
 
-            exampleEntity.Add(new WorldTransform.Data(new WorldTransformData(new Coordinates(0, 0, 0))));
-            exampleEntity.Add(new Name.Data(new NameData("your_example_entity")));
+            entity.Add(new Position.Data(new Coordinates(0, 0, 0)));
+            entity.Add(new Name.Data("your_example_entity"));
 
             var acl = Acl.Build()
                 .SetReadAccess(CommonPredicates.PhysicsOrVisual)
-                .SetWriteAccess<WorldTransform>(CommonPredicates.PhysicsOnly)
+                .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
                 .SetWriteAccess<Name>(CommonPredicates.VisualOnly);
 
-            exampleEntity.SetAcl(acl);
+            entity.SetAcl(acl);
 
-            return exampleEntity;
+            return entity;
+        }
+
+        public static SnapshotEntity Ball(Coordinates position)
+        {
+            var entity = new SnapshotEntity { Prefab = "Ball" };
+
+            entity.Add(new Position.Data(position));
+            entity.Add(new Name.Data(new NameData("ball")));
+
+            var acl = Acl.Build()
+                .SetReadAccess(CommonPredicates.PhysicsOrVisual)
+                .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
+                .SetWriteAccess<Name>(CommonPredicates.VisualOnly);
+
+            entity.SetAcl(acl);
+
+            return entity;
         }
     }
 }
