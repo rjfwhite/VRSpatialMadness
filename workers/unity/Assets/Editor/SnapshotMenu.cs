@@ -1,41 +1,18 @@
-﻿using System.Collections.Generic;
-using System.IO;
 using Assets.EntityTemplates;
-using Improbable;
-using Improbable.Worker;
-using UnityEngine;
-using JetBrains.Annotations;
 using UnityEditor;
+using UnityEngine;
 
-public class SnapshotMenu : MonoBehaviour
+namespace Assets.Editor
 {
-    private static readonly string InitialWorldSnapshotPath = Application.dataPath +
-                                                              "/../../../snapshots/initial_world.snapshot";
-
-    [MenuItem("Improbable/Snapshots/Generate Snapshot Programmatically")]
-    [UsedImplicitly]
-    private static void GenerateSnapshotProgrammatically()
+    public class SnapshotMenu
     {
-        var snapshotEntities = new Dictionary<EntityId, SnapshotEntity>();
-        var currentEntityId = 0;
-
-        snapshotEntities.Add(new EntityId(currentEntityId++), ExampleEntityTemplate.GenerateExampleSnapshotEntityTemplate());
-
-        SaveSnapshot(snapshotEntities);
-    }
-
-    private static void SaveSnapshot(IDictionary<EntityId, SnapshotEntity> snapshotEntities)
-    {
-        File.Delete(InitialWorldSnapshotPath);
-        var maybeError = Snapshot.Save(InitialWorldSnapshotPath, snapshotEntities);
-
-        if (maybeError.HasValue)
+        [MenuItem("Improbable/Snapshots/Generate Snapshot %#&w")]
+        private static void GenerateSnapshot()
         {
-            Debug.LogErrorFormat("Failed to generate initial world snapshot: {0}", maybeError.Value);
-        }
-        else
-        {
-            Debug.LogFormat("Successfully generated initial world snapshot at {0}", InitialWorldSnapshotPath);
+            var path = Application.dataPath + "/../../../snapshots/initial_world.snapshot";
+            var snapshotBuilder = new SnapshotBuilder(path);
+            snapshotBuilder.Add(EntityTemplateFactory.ExampleEntity());
+            snapshotBuilder.SaveSnapshot();
         }
     }
 }
