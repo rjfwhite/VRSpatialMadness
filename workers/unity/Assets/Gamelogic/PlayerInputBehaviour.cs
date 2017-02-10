@@ -16,16 +16,27 @@ namespace Assets.Gamelogic
         private void Awake()
         {
             leftHandTrackedObject = GameObject.Find("/[CameraRig]/Controller (left)").GetComponent<SteamVR_TrackedObject>();
-            leftHandTrackedObject = GameObject.Find("/[CameraRig]/Controller (right)").GetComponent<SteamVR_TrackedObject>();
+            rightHandTrackedObject = GameObject.Find("/[CameraRig]/Controller (right)").GetComponent<SteamVR_TrackedObject>();
         }
 
         private void Update()
         {
-            var device = SteamVR_Controller.Input((int)leftHandTrackedObject.index);
-            if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
+            if (leftHandTrackedObject.index != SteamVR_TrackedObject.EIndex.None)
             {
-                Debug.Log("Press Down");
-                SpawnBall(leftHand.transform.position);
+                var leftDevice = SteamVR_Controller.Input((int)leftHandTrackedObject.index);
+                if (leftDevice.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
+                {
+                    SpawnBall(leftHandTrackedObject.transform.position);
+                }
+            }
+
+            if (rightHandTrackedObject.index != SteamVR_TrackedObject.EIndex.None)
+            {
+                var rightDevice = SteamVR_Controller.Input((int)rightHandTrackedObject.index);
+                if (rightDevice.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
+                {
+                    SpawnBall(rightHandTrackedObject.transform.position);
+                }
             }
         }
 
