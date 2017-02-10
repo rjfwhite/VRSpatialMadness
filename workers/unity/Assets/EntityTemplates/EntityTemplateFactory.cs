@@ -9,17 +9,19 @@ namespace Assets.EntityTemplates
 {
     public class EntityTemplateFactory
     {
-        public static SnapshotEntity ExampleEntity()
+        public static SnapshotEntity Player(Coordinates position)
         {
-            var entity = new SnapshotEntity { Prefab = "ExampleEntity" };
+            var entity = new SnapshotEntity { Prefab = "Player" };
 
-            entity.Add(new Position.Data(new Coordinates(0, 0, 0)));
-            entity.Add(new Name.Data("your_example_entity"));
+            entity.Add(new Position.Data(position));
+            entity.Add(new Colour.Data(new Vector3f(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value)));
+            entity.Add(new VivePlayer.Data(new ViveTransform(), new ViveTransform(), new ViveTransform()));
 
             var acl = Acl.Build()
                 .SetReadAccess(CommonPredicates.PhysicsOrVisual)
                 .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<Name>(CommonPredicates.VisualOnly);
+                .SetWriteAccess<VivePlayer>(CommonPredicates.SpecificClientOnly(SpatialOS.Configuration.EngineId))
+                .SetWriteAccess<Colour>(CommonPredicates.PhysicsOnly);
 
             entity.SetAcl(acl);
 
@@ -51,25 +53,6 @@ namespace Assets.EntityTemplates
             var acl = Acl.Build()
                 .SetReadAccess(CommonPredicates.PhysicsOrVisual)
                 .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<Colour>(CommonPredicates.PhysicsOnly);
-
-            entity.SetAcl(acl);
-
-            return entity;
-        }
-
-        public static SnapshotEntity Player(Coordinates position)
-        {
-            var entity = new SnapshotEntity { Prefab = "Player" };
-
-            entity.Add(new Position.Data(position));
-            entity.Add(new Colour.Data(new Vector3f(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value)));
-            entity.Add(new VivePlayer.Data(new ViveTransform(), new ViveTransform(), new ViveTransform()));
-
-            var acl = Acl.Build()
-                .SetReadAccess(CommonPredicates.PhysicsOrVisual)
-                .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<VivePlayer>(CommonPredicates.SpecificClientOnly(SpatialOS.Configuration.EngineId))
                 .SetWriteAccess<Colour>(CommonPredicates.PhysicsOnly);
 
             entity.SetAcl(acl);
