@@ -1,10 +1,8 @@
 ﻿using Improbable.General;
-using Improbable.Worker;
 using Improbable.Math;
 using Improbable.Player;
 using Improbable.Unity.Core.Acls;
-using UnityEngine;
-using Improbable.Unity.Core;
+using Improbable.Worker;
 
 namespace Assets.EntityTemplates
 {
@@ -32,31 +30,27 @@ namespace Assets.EntityTemplates
             var entity = new SnapshotEntity { Prefab = "Ball" };
 
             entity.Add(new Position.Data(position));
-            entity.Add(new Name.Data(new NameData("ball")));
 
             var acl = Acl.Build()
                 .SetReadAccess(CommonPredicates.PhysicsOrVisual)
-                .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<Name>(CommonPredicates.VisualOnly);
-
+                .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly);
+            
             entity.SetAcl(acl);
 
             return entity;
         }
 
-        public static SnapshotEntity GenerateMyPlayer()
+        public static SnapshotEntity FloorTile(Coordinates position)
         {
-            // Set name of Unity prefab associated with this entity
-            var entity = new SnapshotEntity { Prefab = "Player" };
+            var entity = new SnapshotEntity { Prefab = "FloorTile" };
 
-            // Define components attached to snapshot entity
-            entity.Add(new Position.Data(new Coordinates(Random.Range(-20, 20), 0, Random.Range(-20, 20))));
-            entity.Add(new VivePlayer.Data(new ViveTransform(), new ViveTransform(), new ViveTransform()));
+            entity.Add(new Position.Data(position));
+            entity.Add(new Colour.Data(new Vector3f(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value)));
 
             var acl = Acl.Build()
                 .SetReadAccess(CommonPredicates.PhysicsOrVisual)
                 .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<VivePlayer>(CommonPredicates.SpecificClientOnly(SpatialOS.Configuration.EngineId));
+                .SetWriteAccess<Colour>(CommonPredicates.PhysicsOnly);
 
             entity.SetAcl(acl);
 

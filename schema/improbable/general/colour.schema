@@ -1,0 +1,6 @@
+package improbable.general;
+
+component Colour {
+  id = 1002;
+  Vector3f colour = 1;
+}
