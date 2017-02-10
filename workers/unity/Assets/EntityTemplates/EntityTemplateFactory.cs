@@ -1,6 +1,7 @@
 ﻿using Improbable.General;
 using Improbable.Math;
 using Improbable.Player;
+using Improbable.Server;
 using Improbable.Unity.Core;
 using Improbable.Unity.Core.Acls;
 using Improbable.Worker;
@@ -38,6 +39,23 @@ namespace Assets.EntityTemplates
                 .SetReadAccess(CommonPredicates.PhysicsOrVisual)
                 .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly);
             
+            entity.SetAcl(acl);
+
+            return entity;
+        }
+
+        public static SnapshotEntity GameManager()
+        {
+            var entity = new SnapshotEntity { Prefab = "GameManager" };
+
+            entity.Add(new Position.Data(new Coordinates(0, 0, 50)));
+            entity.Add(new GameManager.Data());
+
+            var acl = Acl.Build()
+                .SetReadAccess(CommonPredicates.PhysicsOnly)
+                .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
+                .SetWriteAccess<GameManager>(CommonPredicates.PhysicsOnly);
+
             entity.SetAcl(acl);
 
             return entity;
