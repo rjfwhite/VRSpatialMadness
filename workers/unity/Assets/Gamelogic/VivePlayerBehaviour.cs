@@ -15,9 +15,10 @@ namespace Assets.Gamelogic
 
         private void OnEnable()
         {
-            leftHand = GameObject.Find("[CameraRig]/Controller (left)").transform;
-            rightHand = GameObject.Find("[CameraRig]/Controller (right)").transform;
-            head = GameObject.Find("[CameraRig]/Camera (head)").transform;
+            Debug.Log("IT BEGINS");
+            leftHand = GameObject.Find("/[CameraRig]/Controller (left)").transform;
+            rightHand = GameObject.Find("/[CameraRig]/Controller (right)").transform;
+            head = GameObject.Find("/[CameraRig]/Camera (eye)").transform;
         }
 
         private void Update()

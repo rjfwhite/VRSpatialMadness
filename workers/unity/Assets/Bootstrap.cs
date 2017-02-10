@@ -1,4 +1,5 @@
-﻿using Improbable.Unity;
+﻿using Assets.EntityTemplates;
+using Improbable.Unity;
 using Improbable.Unity.Configuration;
 using Improbable.Unity.Core;
 using UnityEngine;
@@ -34,5 +35,13 @@ public class Bootstrap : MonoBehaviour
     public void OnConnected()
     {
         Debug.Log("Bootstrap connected to SpatialOS...");
+        if(SpatialOS.Configuration.EnginePlatform == EnginePlatform.Client)
+        {
+            Debug.Log("SPAWN ME A PLAYER m888");
+            SpatialOS.WorkerCommands.CreateEntity("Player", ExampleEntityTemplate.GenerateMyPlayer(), result =>
+            {
+                Debug.Log(result.ErrorMessage);
+            });
+        }
     }
 }
