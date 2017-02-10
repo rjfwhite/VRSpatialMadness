@@ -13,6 +13,7 @@ namespace Assets.Editor
             var path = Application.dataPath + "/../../../snapshots/initial_world.snapshot";
             var snapshotBuilder = new SnapshotBuilder(path);
 
+            snapshotBuilder.Add(EntityTemplateFactory.GameManager());
             snapshotBuilder.Add(EntityTemplateFactory.ExampleEntity());
             snapshotBuilder.Add(EntityTemplateFactory.FloorTile(new Coordinates(0,0,0)));
 

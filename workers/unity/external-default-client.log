@@ -17,6 +17,8 @@ Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityCli
 Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.VR.dll (this message is harmless)
+Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Generated.Code.dll (this message is harmless)
 Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Generated.Code.dll into Unity Child Domain
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.dll (this message is harmless)
@@ -31,20 +33,66 @@ Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityCli
 Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\protobuf-net.dll into Unity Child Domain
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Threading.dll (this message is harmless)
 Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Threading.dll into Unity Child Domain
-- Completed reload, in  0.046 seconds
+- Completed reload, in  0.040 seconds
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.dll (this message is harmless)
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Xml.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 6700x1800 at 0,-440
 <RI> Initializing input.
 <RI> Input initialized.
+desktop: 3200x1800 60Hz; virtual: 12060x2700 at 0,0
 <RI> Initialized touch support.
-UnloadTime: 1.069788 ms
-Command line build/worker/UnityClient@Windows/UnityClient@Windows.exe +assemblyName local_assembly +engineType UnityClient +infraServicesUrl http://127.0.0.1:21000 +appName your_project_name_here -logfile external-default-client.log
+OpenVR initialized!
+ 
+(Filename:  Line: 381)
+
+UnloadTime: 1.708506 ms
+Connected to lighthouse:LHR-0A80CF2C
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Command line build/worker/UnityClient@Windows/UnityClient@Windows.exe +assemblyName local_assembly +engineType UnityClient +infraServicesUrl http://127.0.0.1:21000 +appName lofi -logfile external-default-client.log
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+WorkerConfiguration settings
+AppName = lofi
+AssemblyName = local_assembly
+DeploymentId = 
+DeploymentTag = prod
+EngineId = UnityClient071528e3-29be-4a19-bb08-9f9eea8cdece
+EnginePlatform = Client
+EntityCreationLimitPerFrame = 100
+InfraServiceUrl = http://127.0.0.1:21000
+Ip = 127.0.0.1
+LinkProtocol = RakNet
+Log4NetConfigXml = log4net-default.xml
+LoginToken = 
+MetaData = {  }
+Port = 7777
+ProtocolLoggingOnStartup = False
+ProtocolLogPrefix = protocol-
+ProtocolLogMaxFileBytes = 104857600
+RaknetHeartbeatTimeoutMillis = 60000
+ReceiveQueueCapacity = 32768
+SendQueueCapacity = 16384
+ShowDebugTraces = False
+SteamToken = 
+TcpMultiplexLevel = 32
+UseInstrumentation = True
+UsePerInstanceAssetCache = True
+UsePrefabPooling = False
+
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Configuration.dll (this message is harmless)
+ClientMetrics OS=Windows 10  (10.0.0) 64bit.
+Processor: type Intel(R) Core(TM) i7-4720HQ CPU @ 2.60GHz, cores 8.
+Graphics: id 5080, vendor 4318, name NVIDIA GeForce GTX 970M, size 3040.
+Memory: 16304.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Runtime.Serialization.dll (this message is harmless)
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Xml.Linq.dll (this message is harmless)
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Data.dll (this message is harmless)
@@ -53,9 +101,13 @@ Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityCli
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Mono.Security.dll (this message is harmless)
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.ServiceModel.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1e84 -> priority: 1 
-  Thread -> id: 35e0 -> priority: 1 
+  Thread -> id: 1f38 -> priority: 1 
+  Thread -> id: 1fb8 -> priority: 1 
 Bootstrap connected to SpatialOS...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Trying to spawn...
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -64,3 +116,11 @@ Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityCli
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Security.dll (this message is harmless)
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Messaging.dll (this message is harmless)
 Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Web.Services.dll (this message is harmless)
+success
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+OpenVR Shutdown
+ 
+(Filename:  Line: 815)
+

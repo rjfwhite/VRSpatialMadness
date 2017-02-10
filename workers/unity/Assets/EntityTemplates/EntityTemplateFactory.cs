@@ -1,6 +1,7 @@
 ﻿using Improbable.General;
 using Improbable.Math;
 using Improbable.Player;
+using Improbable.Server;
 using Improbable.Unity.Core;
 using Improbable.Unity.Core.Acls;
 using Improbable.Worker;
@@ -20,6 +21,23 @@ namespace Assets.EntityTemplates
                 .SetReadAccess(CommonPredicates.PhysicsOrVisual)
                 .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
                 .SetWriteAccess<Name>(CommonPredicates.VisualOnly);
+
+            entity.SetAcl(acl);
+
+            return entity;
+        }
+
+        public static SnapshotEntity GameManager()
+        {
+            var entity = new SnapshotEntity { Prefab = "GameManager" };
+
+            entity.Add(new Position.Data(new Coordinates(0, 0, 50)));
+            entity.Add(new GameManager.Data());
+
+            var acl = Acl.Build()
+                .SetReadAccess(CommonPredicates.PhysicsOnly)
+                .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
+                .SetWriteAccess<GameManager>(CommonPredicates.PhysicsOnly);
 
             entity.SetAcl(acl);
 
@@ -58,7 +76,7 @@ namespace Assets.EntityTemplates
             return entity;
         }
 
-        public static SnapshotEntity Player(Coordinates position)
+        public static SnapshotEntity Player(Coordinates position, string workerId)
         {
             var entity = new SnapshotEntity { Prefab = "Player" };
 
@@ -69,7 +87,7 @@ namespace Assets.EntityTemplates
             var acl = Acl.Build()
                 .SetReadAccess(CommonPredicates.PhysicsOrVisual)
                 .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<VivePlayer>(CommonPredicates.SpecificClientOnly(SpatialOS.Configuration.EngineId))
+                .SetWriteAccess<VivePlayer>(CommonPredicates.SpecificClientOnly(workerId))
                 .SetWriteAccess<Colour>(CommonPredicates.PhysicsOnly);
 
             entity.SetAcl(acl);

@@ -1,0 +1,14 @@
+package improbable.server;
+
+type SpawnPlayerRequest {
+	
+}
+
+type SpawnPlayerResponse {
+}
+
+component GameManager {
+	id = 2223;
+
+	command SpawnPlayerRequest spawn_player returns SpawnPlayerResponse;
+}
