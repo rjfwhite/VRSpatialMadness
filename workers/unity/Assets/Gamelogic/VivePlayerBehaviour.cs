@@ -7,15 +7,21 @@ namespace Assets.Gamelogic
 {
     class VivePlayerBehaviour : MonoBehaviour
     {
-        [Require]
-        VivePlayer.Writer VivePlayerWriter;
+        [Require] VivePlayer.Writer VivePlayerWriter;
+
+        private GameObject leftHand;
+        private GameObject rightHand;
+        private GameObject head;
+
+        private void Awake()
+        {
+            leftHand = GameObject.Find("/[CameraRig]/Controller (left)");
+            rightHand = GameObject.Find("/[CameraRig]/Controller (right)");
+            head = GameObject.Find("/[CameraRig]/Camera (eye)");
+        }
 
         private void Update()
         {
-            var leftHand = GameObject.Find("/[CameraRig]/Controller (left)");
-            var rightHand = GameObject.Find("/[CameraRig]/Controller (right)");
-            var head = GameObject.Find("/[CameraRig]/Camera (eye)");
-
             var update = new VivePlayer.Update();
 
             if(leftHand)

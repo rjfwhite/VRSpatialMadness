@@ -1,20 +1,17 @@
-﻿using UnityEngine;
-using Improbable.General;
+﻿using Improbable.General;
 using Improbable.Math;
 using Improbable.Unity.Visualizer;
+using UnityEngine;
 
-namespace Assets.Gamelogic.Behaviours
+namespace Assets.Gamelogic
 {
-    // This MonoBehaviour will be enabled on both client and server-side workers
     public class TransformBehaviour : MonoBehaviour
     {
-        // Inject access to the entity's WorldTransform component
-        [Require]
-        private Position.Writer WorldTransformReader;
+        [Require] private Position.Writer positionWriter;
 
         private void Update()
         {
-            WorldTransformReader.Send(new Position.Update().SetPosition(new Coordinates(transform.position.x, transform.position.y, transform.position.z)));
+            positionWriter.Send(new Position.Update().SetPosition(new Coordinates(transform.position.x, transform.position.y, transform.position.z)));
         }
     }
 }
