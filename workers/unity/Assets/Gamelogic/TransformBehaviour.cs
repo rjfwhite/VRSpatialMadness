@@ -1,5 +1,4 @@
 ﻿using Improbable.General;
-using Improbable.Math;
 using Improbable.Unity.Visualizer;
 using UnityEngine;
 
@@ -8,10 +7,26 @@ namespace Assets.Gamelogic
     public class TransformBehaviour : MonoBehaviour
     {
         [Require] private Position.Writer positionWriter;
+        private float sendInterval = 0.1f;
+        private float elapsedTimeSinceLastUpdate;
+
+        private void OnEnable()
+        {
+            elapsedTimeSinceLastUpdate = Time.time;
+        }
 
         private void Update()
         {
-            positionWriter.Send(new Position.Update().SetPosition(new Coordinates(transform.position.x, transform.position.y, transform.position.z)));
+            if (Time.time - elapsedTimeSinceLastUpdate < sendInterval)
+            {
+                return;
+            }
+            if (Vector3.SqrMagnitude(positionWriter.Data.position.ToVector3() - transform.position) < Mathf.Epsilon)
+            {
+                return;
+            }
+            elapsedTimeSinceLastUpdate = Time.time;
+            positionWriter.Send(new Position.Update().SetPosition(transform.position.ToCoordinates()));
         }
     }
 }
