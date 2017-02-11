@@ -2,7 +2,6 @@
 using Improbable.Math;
 using Improbable.Player;
 using Improbable.Server;
-using Improbable.Unity.Core;
 using Improbable.Unity.Core.Acls;
 using Improbable.Worker;
 
@@ -29,17 +28,19 @@ namespace Assets.EntityTemplates
             return entity;
         }
 
-        public static SnapshotEntity Ball(Coordinates position, Vector3f velocity, string workerid)
+        public static SnapshotEntity Ball(Coordinates position, Vector3f velocity, Vector3f colour, string workerid)
         {
             var entity = new SnapshotEntity { Prefab = "Ball" };
 
             entity.Add(new Position.Data(position));
             entity.Add(new Velocity.Data(velocity));
+            entity.Add(new Colour.Data(colour));
 
             var acl = Acl.Build()
                 .SetReadAccess(CommonPredicates.PhysicsOrVisual)
                 .SetWriteAccess<Position>(CommonPredicates.SpecificClientOnly(workerid))
-                .SetWriteAccess<Velocity>(CommonPredicates.SpecificClientOnly(workerid));
+                .SetWriteAccess<Velocity>(CommonPredicates.SpecificClientOnly(workerid))
+                .SetWriteAccess<Colour>(CommonPredicates.PhysicsOnly);
 
             entity.SetAcl(acl);
 

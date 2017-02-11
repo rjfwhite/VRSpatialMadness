@@ -10,10 +10,15 @@ namespace Assets.Gamelogic
     class PlayerInputBehaviour : MonoBehaviour
     {
         [Require] VivePlayer.Writer vivePlayerWriter;
-        public SteamVR_TrackedObject leftHandTrackedObject;
-        public SteamVR_TrackedObject rightHandTrackedObject;
-
+        private SteamVR_TrackedObject leftHandTrackedObject;
+        private SteamVR_TrackedObject rightHandTrackedObject;
+        private ColourVisualizer colourVisualizer;
         private Vector3 lastLeftHandPosition;
+
+        private void Awake()
+        {
+            colourVisualizer = GetComponent<ColourVisualizer>();
+        }
 
         private void Update()
         {
@@ -55,7 +60,7 @@ namespace Assets.Gamelogic
 
         private void SpawnBall(Vector3 position, Vector3 velocity)
         {
-            SpatialOS.Commands.CreateEntity(vivePlayerWriter, "Ball", EntityTemplateFactory.Ball(new Coordinates(position.x, position.y, position.z), new Vector3f(velocity.x, velocity.y, velocity.z), Bootstrap.WorkerId), callback => {});
+            SpatialOS.Commands.CreateEntity(vivePlayerWriter, "Ball", EntityTemplateFactory.Ball(new Coordinates(position.x, position.y, position.z), new Vector3f(velocity.x, velocity.y, velocity.z), colourVisualizer.colour, Bootstrap.WorkerId), callback => {});
         }
     }
 }
