@@ -21,6 +21,7 @@ namespace Assets.Editor
 
         private static void AddFloorTiles(SnapshotBuilder snapshotBuilder)
         {
+            var tileWidth = 10f;
             var width = 10;
             var height = 10;
 
@@ -28,7 +29,7 @@ namespace Assets.Editor
             {
                 for (int j = 0; j < height; j++)
                 {
-                    snapshotBuilder.Add(EntityTemplateFactory.FloorTile(new Coordinates(-0.5 * width + i, 0, -0.5 * height + j)));
+                    snapshotBuilder.Add(EntityTemplateFactory.FloorTile(new Coordinates((-0.5 * width + i) * tileWidth, 0, (-0.5 * height + j) * tileWidth)));
                 }
             }
                 

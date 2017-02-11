@@ -55,7 +55,6 @@ namespace Assets.Gamelogic
 
         private void SpawnBall(Vector3 position, Vector3 velocity)
         {
-            Debug.Log("SPAWNING BAALL");
             SpatialOS.Commands.CreateEntity(vivePlayerWriter, "Ball", EntityTemplateFactory.Ball(new Coordinates(position.x, position.y, position.z), new Vector3f(velocity.x, velocity.y, velocity.z), Bootstrap.WorkerId), callback => {});
         }
     }
