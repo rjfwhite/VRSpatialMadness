@@ -11,6 +11,11 @@ namespace Assets.Gamelogic
 
         private void OnCollisionEnter(Collision collision)
         {
+            if (colourWriter == null)
+            {
+                return;
+            }
+
             var otherColourVisualizer = collision.gameObject.GetComponent<ColourVisualizer>();
             if (otherColourVisualizer != null)
             {
