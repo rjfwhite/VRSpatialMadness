@@ -21,8 +21,8 @@ namespace Assets.Editor
 
         private static void AddFloorTiles(SnapshotBuilder snapshotBuilder)
         {
-            var width = 100;
-            var height = 100;
+            var width = 10;
+            var height = 10;
 
             for (int i = 0; i < width; i++)
             {

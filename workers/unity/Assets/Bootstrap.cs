@@ -10,6 +10,8 @@ public class Bootstrap : MonoBehaviour
 {
     public WorkerConfigurationData Configuration = new WorkerConfigurationData();
 
+    public static string WorkerId;
+
     public void Start()
     {
         SpatialOS.ApplyConfiguration(Configuration);
@@ -40,7 +42,7 @@ public class Bootstrap : MonoBehaviour
         {
             Debug.Log("Trying to spawn...");
             SpatialOS.WorkerCommands.SendCommand(GameManager.Commands.SpawnPlayer.Descriptor, new SpawnPlayerRequest(), new Improbable.EntityId(1), result => {
-                Debug.Log(result.ErrorMessage);
+                WorkerId = result.Response.Value.workerid;
             });
         }
     }

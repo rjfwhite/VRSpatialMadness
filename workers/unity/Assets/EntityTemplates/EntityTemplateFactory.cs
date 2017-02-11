@@ -10,7 +10,7 @@ namespace Assets.EntityTemplates
 {
     public class EntityTemplateFactory
     {
-        public static SnapshotEntity Player(Coordinates position)
+        public static SnapshotEntity Player(Coordinates position, string workerid)
         {
             var entity = new SnapshotEntity { Prefab = "Player" };
 
@@ -21,7 +21,7 @@ namespace Assets.EntityTemplates
             var acl = Acl.Build()
                 .SetReadAccess(CommonPredicates.PhysicsOrVisual)
                 .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly)
-                .SetWriteAccess<VivePlayer>(CommonPredicates.SpecificClientOnly(SpatialOS.Configuration.EngineId))
+                .SetWriteAccess<VivePlayer>(CommonPredicates.SpecificClientOnly(workerid))
                 .SetWriteAccess<Colour>(CommonPredicates.PhysicsOnly);
 
             entity.SetAcl(acl);
@@ -29,16 +29,18 @@ namespace Assets.EntityTemplates
             return entity;
         }
 
-        public static SnapshotEntity Ball(Coordinates position)
+        public static SnapshotEntity Ball(Coordinates position, Vector3f velocity, string workerid)
         {
             var entity = new SnapshotEntity { Prefab = "Ball" };
 
             entity.Add(new Position.Data(position));
+            entity.Add(new Velocity.Data(velocity));
 
             var acl = Acl.Build()
                 .SetReadAccess(CommonPredicates.PhysicsOrVisual)
-                .SetWriteAccess<Position>(CommonPredicates.PhysicsOnly);
-            
+                .SetWriteAccess<Position>(CommonPredicates.SpecificClientOnly(workerid))
+                .SetWriteAccess<Velocity>(CommonPredicates.SpecificClientOnly(workerid));
+
             entity.SetAcl(acl);
 
             return entity;

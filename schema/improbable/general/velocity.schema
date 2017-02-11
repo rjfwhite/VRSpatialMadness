@@ -1,0 +1,6 @@
+package improbable.general;
+
+component Velocity {
+  id = 3001;
+  Vector3f velocity = 1;
+}

@@ -23,7 +23,11 @@ namespace Assets.Gamelogic
         void OnComponentUpdated(Position.Update update)
         {
             if (positionReader.HasAuthority) return;
-            if (update.position.HasValue) transform.position = update.position.Value.ToVector3();
+            if (update.position.HasValue)
+            {
+                transform.position = update.position.Value.ToVector3();
+            }
+
         }
     }
 

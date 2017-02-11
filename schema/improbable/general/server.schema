@@ -5,6 +5,7 @@ type SpawnPlayerRequest {
 }
 
 type SpawnPlayerResponse {
+	string workerid = 1;
 }
 
 component GameManager {

@@ -22,7 +22,7 @@ namespace Assets.Gamelogic
             SpatialOS.WorkerCommands.CreateEntity("Player", EntityTemplateFactory.Player(new Improbable.Math.Coordinates(Random.RandomRange(-30, 30), 0, Random.RandomRange(-30, 30)), request.CallerInfo.CallerWorkerId), callback =>
             {
                 Debug.Log("SUCCESSFULLY SPAWNED PLAYER FOR " + request.CallerInfo.CallerWorkerId);
-                request.Respond(new SpawnPlayerResponse());
+                request.Respond(new SpawnPlayerResponse(request.CallerInfo.CallerWorkerId));
             });
         }
 
