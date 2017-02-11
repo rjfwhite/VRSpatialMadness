@@ -9,8 +9,7 @@ namespace Assets.Gamelogic
 {
     class GameManagerBehaviour : MonoBehaviour
     {
-        [Require]
-        private GameManager.Writer GameManagerWriter;
+        [Require] private GameManager.Writer GameManagerWriter;
 
         private void OnEnable()
         {
@@ -20,7 +19,10 @@ namespace Assets.Gamelogic
         private void HandleSpawnPlayer(Improbable.Entity.Component.ResponseHandle<GameManager.Commands.SpawnPlayer, SpawnPlayerRequest, SpawnPlayerResponse> request)
         {
             Debug.Log("GOT REQUEST TO SPAWN PLAYER");
-            SpatialOS.WorkerCommands.CreateEntity("Player", EntityTemplateFactory.Player(new Improbable.Math.Coordinates(Random.Range(-30, 30), 0, Random.Range(-30, 30)), request.CallerInfo.CallerWorkerId), callback =>
+            int newTeamId = GameManagerWriter.Data.currentTeamId + 1;
+            GameManagerWriter.Send(new GameManager.Update().SetCurrentTeamId(newTeamId));
+
+            SpatialOS.WorkerCommands.CreateEntity("Player", EntityTemplateFactory.Player(new Improbable.Math.Coordinates(Random.Range(-30, 30), 0, Random.Range(-30, 30)), request.CallerInfo.CallerWorkerId, newTeamId), callback =>
             {
                 if (callback.StatusCode != StatusCode.Success)
                 {

@@ -1,0 +1,6 @@
+package improbable.general;
+
+component Team {
+  id = 1200;
+  int32 team_id = 1;
+}

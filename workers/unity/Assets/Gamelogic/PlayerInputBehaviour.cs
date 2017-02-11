@@ -13,11 +13,13 @@ namespace Assets.Gamelogic
         private SteamVR_TrackedObject leftHandTrackedObject;
         private SteamVR_TrackedObject rightHandTrackedObject;
         private ColourVisualizer colourVisualizer;
+        private TeamVisualizer teamVisualizer;
         private Vector3 lastLeftHandPosition;
 
         private void Awake()
         {
             colourVisualizer = GetComponent<ColourVisualizer>();
+            teamVisualizer = GetComponent<TeamVisualizer>();
         }
 
         private void Update()
@@ -60,7 +62,7 @@ namespace Assets.Gamelogic
 
         private void SpawnBall(Vector3 position, Vector3 velocity)
         {
-            SpatialOS.Commands.CreateEntity(vivePlayerWriter, "Ball", EntityTemplateFactory.Ball(new Coordinates(position.x, position.y, position.z), new Vector3f(velocity.x, velocity.y, velocity.z), colourVisualizer.colour, Bootstrap.WorkerId), callback => {});
+            SpatialOS.Commands.CreateEntity(vivePlayerWriter, "Ball", EntityTemplateFactory.Ball(new Coordinates(position.x, position.y, position.z), new Vector3f(velocity.x, velocity.y, velocity.z), colourVisualizer.Colour, Bootstrap.WorkerId, teamVisualizer.TeamId), callback => {});
         }
     }
 }

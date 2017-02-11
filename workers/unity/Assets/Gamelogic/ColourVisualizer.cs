@@ -8,7 +8,7 @@ namespace Assets.Gamelogic
     public class ColourVisualizer : MonoBehaviour
     {
         [Require] private Colour.Reader colourReader;
-        public Vector3f colour { get { return colourReader.Data.colour; } }
+        public Vector3f Colour { get { return colourReader.Data.colour; } }
 
         private void OnEnable()
         {
