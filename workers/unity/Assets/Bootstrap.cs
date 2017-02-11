@@ -5,7 +5,6 @@ using Improbable.Unity.Core;
 using Improbable.Worker;
 using UnityEngine;
 
-// Placed on a gameobject in client scene to execute connection logic on client startup
 public class Bootstrap : MonoBehaviour
 {
     public WorkerConfigurationData Configuration = new WorkerConfigurationData();
@@ -45,9 +44,13 @@ public class Bootstrap : MonoBehaviour
             {
                 if (result.StatusCode == StatusCode.Failure)
                 {
-                    Debug.LogError("Spawning player failed");
+                    Debug.LogError("Spawning player failed. " + result.ErrorMessage);
                 }
-                WorkerId = result.Response.Value.workerid;
+                else
+                {
+                    Debug.Log("Spawning Player succeeded");
+                    WorkerId = result.Response.Value.workerid;
+                }
             });
         }
     }

@@ -8,7 +8,7 @@ type ViveTransform {
 }
 
 component VivePlayer {
-    id = 1101;
+    id = 1102;
     ViveTransform head = 1;
     ViveTransform left_hand = 2;
     ViveTransform right_hand = 3;

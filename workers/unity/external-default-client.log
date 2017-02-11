@@ -37,7 +37,7 @@ Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\Un
 Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\protobuf-net.dll into Unity Child Domain
 Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Threading.dll (this message is harmless)
 Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Threading.dll into Unity Child Domain
-- Completed reload, in  0.039 seconds
+- Completed reload, in  0.038 seconds
 Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.dll (this message is harmless)
 Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Xml.dll (this message is harmless)
@@ -53,7 +53,7 @@ VR: OpenVR Error! OpenVR failed initialization with error code VRInitError_IPC_C
  
 (Filename:  Line: 954)
 
-UnloadTime: 1.124730 ms
+UnloadTime: 0.989306 ms
 Command line build/worker/UnityClient@Windows/UnityClient@Windows.exe +assemblyName local_assembly +engineType UnityClient +infraServicesUrl http://127.0.0.1:21000 +appName lofi -logfile external-default-client.log
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -63,7 +63,7 @@ AppName = lofi
 AssemblyName = local_assembly
 DeploymentId = 
 DeploymentTag = prod
-EngineId = UnityClientbb52e272-c28b-4834-8991-59e61010f8f8
+EngineId = UnityClient3380c582-91d3-4449-8db6-581bc1553ff4
 EnginePlatform = Client
 EntityCreationLimitPerFrame = 100
 InfraServiceUrl = http://127.0.0.1:21000
@@ -105,8 +105,8 @@ Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\Un
 Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Mono.Security.dll (this message is harmless)
 Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.ServiceModel.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3b3c -> priority: 1 
-  Thread -> id: 2558 -> priority: 1 
+  Thread -> id: 2b44 -> priority: 1 
+  Thread -> id: 372c -> priority: 1 
 Bootstrap connected to SpatialOS...
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -115,8 +115,7 @@ Trying to spawn...
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Web.dll (this message is harmless)
-Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.IdentityModel.dll (this message is harmless)
-Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Security.dll (this message is harmless)
-Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Messaging.dll (this message is harmless)
-Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Web.Services.dll (this message is harmless)
+Spawning Player succeeded
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+

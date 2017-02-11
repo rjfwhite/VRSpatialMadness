@@ -10,6 +10,6 @@ type SpawnPlayerResponse {
 
 component GameManager {
 	id = 2223;
-
+	int32 current_team_id = 1;
 	command SpawnPlayerRequest spawn_player returns SpawnPlayerResponse;
 }

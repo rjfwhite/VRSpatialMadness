@@ -52,7 +52,7 @@ namespace Assets.EntityTemplates
             var entity = new SnapshotEntity { Prefab = "GameManager" };
 
             entity.Add(new Position.Data(new Coordinates(0, 0, 50)));
-            entity.Add(new GameManager.Data());
+            entity.Add(new GameManager.Data(0));
 
             var acl = Acl.Build()
                 .SetReadAccess(CommonPredicates.PhysicsOnly)
