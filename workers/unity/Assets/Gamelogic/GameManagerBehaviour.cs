@@ -22,7 +22,7 @@ namespace Assets.Gamelogic
             int newTeamId = GameManagerWriter.Data.currentTeamId + 1;
             GameManagerWriter.Send(new GameManager.Update().SetCurrentTeamId(newTeamId));
 
-            SpatialOS.WorkerCommands.CreateEntity("Player", EntityTemplateFactory.Player(new Improbable.Math.Coordinates(Random.Range(-15, 15), 0, Random.Range(-15, 15)), request.CallerInfo.CallerWorkerId, newTeamId), callback =>
+            SpatialOS.WorkerCommands.CreateEntity("Player", EntityTemplateFactory.Player(new Improbable.Math.Coordinates(Random.Range(-20, 15), 0, Random.Range(-20, 20)), request.CallerInfo.CallerWorkerId, newTeamId), callback =>
 
             {
                 if (callback.StatusCode != StatusCode.Success)
