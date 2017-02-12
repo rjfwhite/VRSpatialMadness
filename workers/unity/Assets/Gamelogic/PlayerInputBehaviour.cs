@@ -94,7 +94,8 @@ namespace Assets.Gamelogic
 
             if (Mathf.Abs(touchpad.x) > movementSensitivity)
             {
-                transform.Rotate(0, touchpad.x * 1f, 0);
+                transform.position -= transform.right * Time.deltaTime * (touchpad.x * 5f);
+                //transform.Rotate(0, touchpad.x * 1f, 0);
             }
         }
 

@@ -27,6 +27,7 @@ public class Bootstrap : MonoBehaviour
                 Time.fixedDeltaTime = 1.0f / fixedFramerate;
                 break;
             case EnginePlatform.Client:
+                Application.targetFrameRate = 120;
                 SpatialOS.OnConnected += OnConnected;
                 break;
         }

@@ -17,7 +17,6 @@ namespace Assets.Gamelogic
 
         private void Update()
         {
-            Debug.LogError("ss " + objectRigidBody.velocity.magnitude);
             if (objectRigidBody.velocity.magnitude > MaxSpeed)
             {
                 objectRigidBody.velocity = objectRigidBody.velocity.normalized*MaxSpeed;
