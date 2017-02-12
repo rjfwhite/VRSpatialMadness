@@ -17,31 +17,33 @@ namespace Assets.Gamelogic
         private TeamVisualizer teamVisualizer;
         private Vector3 lastLeftHandPosition;
         private float movementSensitivity = 0.2f;
+        private GameObject head;
+        private GameObject leftHand;
+        private GameObject rightHand;
 
         private void Awake()
         {
+            head = GameObject.Find("/[CameraRig]/Camera (eye)");
+            leftHand = GameObject.Find("/[CameraRig]/Controller (left)");
+            rightHand = GameObject.Find("/[CameraRig]/Controller (right)");
+
             colourVisualizer = GetComponent<ColourVisualizer>();
             teamVisualizer = GetComponent<TeamVisualizer>();
         }
 
         private void Update()
         {
-            var leftHand = GameObject.Find("/[CameraRig]/Controller (left)");
-            var rightHand = GameObject.Find("/[CameraRig]/Controller (right)");
-
-            if(!leftHand || !rightHand)
+            if (!head || !leftHand || !rightHand)
             {
                 return;
             }
-
+            
             var leftHandDeltaPosition = leftHand.transform.position - lastLeftHandPosition;
             var leftHandVelocity = leftHandDeltaPosition / Time.deltaTime;
             lastLeftHandPosition = leftHand.transform.position;
 
-
-            leftHandTrackedObject = GameObject.Find("/[CameraRig]/Controller (left)").GetComponent<SteamVR_TrackedObject>();
-            rightHandTrackedObject = GameObject.Find("/[CameraRig]/Controller (right)").GetComponent<SteamVR_TrackedObject>();
-
+            leftHandTrackedObject = leftHand.GetComponent<SteamVR_TrackedObject>();
+            rightHandTrackedObject = rightHand.GetComponent<SteamVR_TrackedObject>();
 
             if (leftHandTrackedObject.index != SteamVR_TrackedObject.EIndex.None)
             {
@@ -89,13 +91,14 @@ namespace Assets.Gamelogic
         {
             if (Mathf.Abs(touchpad.y) > movementSensitivity)
             {
-                transform.position -= transform.forward * Time.deltaTime * (touchpad.y * 5f);
+                var movementdirection = Quaternion.Euler(0, head.transform.rotation.eulerAngles.y, 0) * (transform.forward * Time.deltaTime * (touchpad.y * 5f));
+                transform.position += movementdirection;
             }
 
             if (Mathf.Abs(touchpad.x) > movementSensitivity)
             {
-                transform.position -= transform.right * Time.deltaTime * (touchpad.x * 5f);
-                //transform.Rotate(0, touchpad.x * 1f, 0);
+                var movementdirection = Quaternion.Euler(0, head.transform.rotation.eulerAngles.y, 0) * (transform.right * Time.deltaTime * (touchpad.x * 5f));
+                transform.position += movementdirection;
             }
         }
 

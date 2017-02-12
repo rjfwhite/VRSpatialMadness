@@ -43,7 +43,7 @@ namespace Assets.Gamelogic
 
             GameObject.Find("/[CameraRig]").transform.position = transform.position;
             //GameObject.Find("/[CameraRig]").transform.rotation = transform.rotation;
-            GameObject.Find("/[CameraRig]").transform.rotation = Quaternion.Euler(0, head.transform.rotation.eulerAngles.y, 0);
+            //GameObject.Find("/[CameraRig]").transform.rotation = Quaternion.Euler(0, head.transform.rotation.eulerAngles.y, 0);
         }
 
         private ViveTransform createViveTransform(Transform unityTransform)
