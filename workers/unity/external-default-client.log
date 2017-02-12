@@ -1,163 +1,59 @@
 Initialize engine version: 5.5.1f1 (88d00a7498cd)
 GfxDevice: creating device client; threaded=1
-Crash!!!
-SymInit: Symbol-SearchPath: '.;C:\VR\workers\unity;C:\VR\workers\unity\build\worker\UnityClient@Windows;C:\Windows;C:\Windows\system32;SRV*C:\websymbols*http://msdl.microsoft.com/download/symbols;', symOptions: 530, UserName: 'rob'
-OS-Version: 10.0.14393 () 0x100-0x1
-C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows.exe:UnityClient@Windows.exe (00820000), size: 19075072 (result: 0), SymType: '-exported-', PDB: 'C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows.exe', fileVersion: 5.5.1.53258
-C:\Windows\SYSTEM32\ntdll.dll:ntdll.dll (77940000), size: 1585152 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\ntdll.dll', fileVersion: 10.0.14393.479
-C:\Windows\System32\KERNEL32.DLL:KERNEL32.DLL (77550000), size: 917504 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\KERNEL32.DLL', fileVersion: 10.0.14393.0
-C:\Windows\System32\KERNELBASE.dll:KERNELBASE.dll (76630000), size: 1708032 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\KERNELBASE.dll', fileVersion: 10.0.14393.479
-C:\Windows\System32\USER32.dll:USER32.dll (76EC0000), size: 1437696 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\USER32.dll', fileVersion: 10.0.14393.576
-C:\Windows\System32\win32u.dll:win32u.dll (767E0000), size: 86016 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\win32u.dll', fileVersion: 10.0.14393.51
-C:\Windows\SYSTEM32\HID.DLL:HID.DLL (52810000), size: 40960 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\HID.DLL', fileVersion: 10.0.14393.0
-C:\Windows\System32\GDI32.dll:GDI32.dll (760F0000), size: 176128 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\GDI32.dll', fileVersion: 10.0.14393.206
-C:\Windows\System32\gdi32full.dll:gdi32full.dll (776F0000), size: 1421312 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\gdi32full.dll', fileVersion: 10.0.14393.576
-C:\Windows\System32\msvcrt.dll:msvcrt.dll (77630000), size: 778240 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\msvcrt.dll', fileVersion: 7.0.14393.0
-C:\Windows\System32\ole32.dll:ole32.dll (77170000), size: 958464 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\ole32.dll', fileVersion: 10.0.14393.576
-C:\Windows\System32\combase.dll:combase.dll (76800000), size: 2166784 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\combase.dll', fileVersion: 10.0.14393.576
-C:\Windows\System32\ucrtbase.dll:ucrtbase.dll (77850000), size: 917504 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\ucrtbase.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\RPCRT4.dll:RPCRT4.dll (75A50000), size: 790528 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\RPCRT4.dll', fileVersion: 10.0.14393.82
-C:\Windows\SYSTEM32\VERSION.dll:VERSION.dll (74380000), size: 32768 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\VERSION.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\SspiCli.dll:SspiCli.dll (74400000), size: 122880 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SspiCli.dll', fileVersion: 10.0.14393.576
-C:\Windows\System32\CRYPTBASE.dll:CRYPTBASE.dll (743F0000), size: 40960 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\CRYPTBASE.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\bcryptPrimitives.dll:bcryptPrimitives.dll (774E0000), size: 368640 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\bcryptPrimitives.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\sechost.dll:sechost.dll (765E0000), size: 266240 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\sechost.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\SHLWAPI.dll:SHLWAPI.dll (77490000), size: 286720 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SHLWAPI.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\ADVAPI32.dll:ADVAPI32.dll (759D0000), size: 487424 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\ADVAPI32.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\SHELL32.dll:SHELL32.dll (74540000), size: 20811776 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SHELL32.dll', fileVersion: 10.0.14393.693
-C:\Windows\System32\cfgmgr32.dll:cfgmgr32.dll (762F0000), size: 221184 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\cfgmgr32.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\windows.storage.dll:windows.storage.dll (75B80000), size: 5693440 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\windows.storage.dll', fileVersion: 10.0.14393.479
-C:\Windows\System32\powrprof.dll:powrprof.dll (77120000), size: 282624 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\powrprof.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\kernel.appcore.dll:kernel.appcore.dll (76390000), size: 53248 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\kernel.appcore.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\shcore.dll:shcore.dll (75920000), size: 557056 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\shcore.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\profapi.dll:profapi.dll (77110000), size: 61440 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\profapi.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\WS2_32.dll:WS2_32.dll (763A0000), size: 405504 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\WS2_32.dll', fileVersion: 10.0.14393.206
-C:\Windows\System32\OLEAUT32.dll:OLEAUT32.dll (77270000), size: 606208 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\OLEAUT32.dll', fileVersion: 10.0.14393.447
-C:\Windows\SYSTEM32\OPENGL32.dll:OPENGL32.dll (68C80000), size: 917504 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\OPENGL32.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\msvcp_win.dll:msvcp_win.dll (74420000), size: 503808 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\msvcp_win.dll', fileVersion: 10.0.14393.0
-C:\Windows\SYSTEM32\WINMM.dll:WINMM.dll (735C0000), size: 147456 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\WINMM.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\IMM32.dll:IMM32.dll (76E90000), size: 151552 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\IMM32.dll', fileVersion: 10.0.14393.0
-C:\Windows\SYSTEM32\DNSAPI.dll:DNSAPI.dll (71EF0000), size: 507904 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\DNSAPI.dll', fileVersion: 10.0.14393.206
-C:\Windows\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (735F0000), size: 192512 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\IPHLPAPI.DLL', fileVersion: 10.0.14393.0
-C:\Windows\SYSTEM32\WINHTTP.dll:WINHTTP.dll (72970000), size: 655360 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\WINHTTP.dll', fileVersion: 10.0.14393.351
-C:\Windows\SYSTEM32\GLU32.dll:GLU32.dll (507C0000), size: 151552 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\GLU32.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\NSI.dll:NSI.dll (765D0000), size: 28672 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\NSI.dll', fileVersion: 10.0.14393.0
-C:\Windows\SYSTEM32\DDRAW.dll:DDRAW.dll (50CA0000), size: 970752 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\DDRAW.dll', fileVersion: 10.0.14393.447
-C:\Windows\SYSTEM32\WINMMBASE.dll:WINMMBASE.dll (72680000), size: 143360 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\WINMMBASE.dll', fileVersion: 10.0.14393.0
-C:\Windows\SYSTEM32\DCIMAN32.dll:DCIMAN32.dll (563A0000), size: 28672 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\DCIMAN32.dll', fileVersion: 10.0.14393.0
-C:\Windows\system32\uxtheme.dll:uxtheme.dll (6C670000), size: 479232 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\uxtheme.dll', fileVersion: 10.0.14393.0
-C:\Program Files (x86)\Common Files\Microsoft Shared\Ink\tiptsf.dll:tiptsf.dll (6BF20000), size: 503808 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files (x86)\Common Files\Microsoft Shared\Ink\tiptsf.dll', fileVersion: 10.0.14393.206
-C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Mono\mono.dll:mono.dll (10000000), size: 2297856 (result: 0), SymType: '-exported-', PDB: 'C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Mono\mono.dll', fileVersion: 1.0.0.1
-C:\Windows\System32\PSAPI.DLL:PSAPI.DLL (77930000), size: 24576 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\PSAPI.DLL', fileVersion: 10.0.14393.0
-C:\Windows\SYSTEM32\MSWSOCK.dll:MSWSOCK.dll (71930000), size: 319488 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\MSWSOCK.dll', fileVersion: 10.0.14393.0
-C:\Windows\System32\MSCTF.dll:MSCTF.dll (76120000), size: 1265664 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\MSCTF.dll', fileVersion: 10.0.14393.479
-C:\Windows\system32\dwmapi.dll:dwmapi.dll (719F0000), size: 126976 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\dwmapi.dll', fileVersion: 10.0.14393.206
-C:\Windows\SYSTEM32\d3d11.dll:d3d11.dll (61480000), size: 2289664 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\d3d11.dll', fileVersion: 10.0.14393.479
-C:\Windows\SYSTEM32\dxgi.dll:dxgi.dll (613F0000), size: 540672 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dxgi.dll', fileVersion: 10.0.14393.479
-C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Plugins\openvr_api.dll:openvr_api.dll (689D0000), size: 278528 (result: 0), SymType: '-exported-', PDB: 'C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Plugins\openvr_api.dll'
-C:\Windows\System32\DriverStore\FileRepository\nvrzwu.inf_amd64_c4003218aed4ab4f\nvwgf2um.dll:nvwgf2um.dll (07540000), size: 20688896 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nvrzwu.inf_amd64_c4003218aed4ab4f\nvwgf2um.dll', fileVersion: 21.21.13.7654
-C:\Windows\SYSTEM32\bcrypt.dll:bcrypt.dll (72660000), size: 110592 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\bcrypt.dll', fileVersion: 10.0.14393.576
-C:\Windows\System32\clbcatq.dll:clbcatq.dll (76260000), size: 540672 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\clbcatq.dll', fileVersion: 2001.12.10941.16384
-C:\Windows\system32\wbem\wbemprox.dll:wbemprox.dll (71750000), size: 53248 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wbem\wbemprox.dll', fileVersion: 10.0.14393.0
-C:\Windows\SYSTEM32\wbemcomn.dll:wbemcomn.dll (716E0000), size: 421888 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\wbemcomn.dll', fileVersion: 10.0.14393.0
-C:\Windows\system32\wbem\wbemsvc.dll:wbemsvc.dll (70270000), size: 65536 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wbem\wbemsvc.dll', fileVersion: 10.0.14393.0
-C:\Windows\SYSTEM32\dbghelp.dll:dbghelp.dll (71590000), size: 1331200 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dbghelp.dll', fileVersion: 10.0.14321.1024
+VR: OpenVR Error! OpenVR failed initialization with error code VRInitError_IPC_ConnectFailed: "Connect to VR Server Failed (301)"!
+ 
+(Filename:  Line: 954)
 
-========== OUTPUTING STACK TRACE ==================
-
-0x00ED85E8 (UnityClient@Windows) physx::shdfnd::TempAllocator::`default constructor closure'
-0x76EED2B3 (USER32) SetManipulationInputTarget
-0x76ECE88A (USER32) DispatchMessageW
-0x76ECE4C0 (USER32) DispatchMessageW
-0x76EDAD70 (USER32) CharUpperW
-0x779B08C6 (ntdll) KiUserCallbackDispatcher
-0x76ED6A6D (USER32) PeekMessageW
-0x768AAAE6 (combase) CoCreateFreeThreadedMarshaler
-0x768AAD1B (combase) CoCreateFreeThreadedMarshaler
-0x768AADFD (combase) CoCreateFreeThreadedMarshaler
-0x768AB2BC (combase) CoCreateFreeThreadedMarshaler
-0x76897301 (combase) CoGetCallContext
-0x768A8306 (combase) CoCreateFreeThreadedMarshaler
-0x768A7BEF (combase) CoCreateFreeThreadedMarshaler
-0x76823045 (combase) CStdAsyncStubBuffer_Disconnect
-0x75A55A9A (RPCRT4) NdrClientCall2
-0x76823A80 (combase) WdtpInterfacePointer_UserSize
-0x76912ABF (combase) Ordinal99
-0x71752D95 (wbemprox) DllGetClassObject
-0x717524A0 (wbemprox) DllGetClassObject
-  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 71751BA9)
-0x71751BA9 (wbemprox) 
-0x71752A1F (wbemprox) DllGetClassObject
-0x00ECBBF5 (UnityClient@Windows) physx::shdfnd::TempAllocator::`default constructor closure'
-0x00ECBEAB (UnityClient@Windows) physx::shdfnd::TempAllocator::`default constructor closure'
-0x00F18E98 (UnityClient@Windows) physx::shdfnd::ErrorHandler::getErrorCallback
-0x00F1759E (UnityClient@Windows) physx::shdfnd::ErrorHandler::getErrorCallback
-0x00F303FC (UnityClient@Windows) physx::shdfnd::ErrorHandler::getErrorCallback
-0x00A83C7D (UnityClient@Windows) physx::shdfnd::Foundation::getPAUtils
-0x00A84658 (UnityClient@Windows) physx::shdfnd::Foundation::getPAUtils
-0x009E7BF3 (UnityClient@Windows) physx::shdfnd::ErrorHandler::getMaxCallbackNum
-0x00EDA6C5 (UnityClient@Windows) physx::shdfnd::TempAllocator::`default constructor closure'
-0x00F7A158 (UnityClient@Windows) physx::shdfnd::Foundation::getErrorMutex
-0x00FB2A28 (UnityClient@Windows) physx::shdfnd::Foundation::getErrorMutex
-0x775662C4 (KERNEL32) BaseThreadInitThunk
-0x779A0FD9 (ntdll) RtlSubscribeWnfStateChangeNotification
-0x779A0FA4 (ntdll) RtlSubscribeWnfStateChangeNotification
-
-========== END OF STACKTRACE ===========
-
-**** Crash! ****
-Initialize engine version: 5.5.1f1 (88d00a7498cd)
-GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 970M (ID=0x13d8)
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
     Vendor:   NVIDIA
-    VRAM:     3040 MB
-    Driver:   20.19.15.4531
+    VRAM:     3072 MB
+    Driver:   21.21.13.7653
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.VR.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Generated.Code.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Generated.Code.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.Framework.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.Framework.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\log4net.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\log4net.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Newtonsoft.Json.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Newtonsoft.Json.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\protobuf-net.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\protobuf-net.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Threading.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Threading.dll into Unity Child Domain
-- Completed reload, in  0.043 seconds
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Xml.dll (this message is harmless)
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.VR.dll (this message is harmless)
+Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Generated.Code.dll (this message is harmless)
+Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Generated.Code.dll into Unity Child Domain
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.dll (this message is harmless)
+Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.dll into Unity Child Domain
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.Framework.dll (this message is harmless)
+Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.Framework.dll into Unity Child Domain
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\log4net.dll (this message is harmless)
+Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\log4net.dll into Unity Child Domain
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Newtonsoft.Json.dll (this message is harmless)
+Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Newtonsoft.Json.dll into Unity Child Domain
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\protobuf-net.dll (this message is harmless)
+Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\protobuf-net.dll into Unity Child Domain
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Threading.dll (this message is harmless)
+Loading D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Threading.dll into Unity Child Domain
+- Completed reload, in  0.038 seconds
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.dll (this message is harmless)
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Xml.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
-desktop: 1920x1080 60Hz; virtual: 9180x2700 at 0,0
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initialized touch support.
-OpenVR initialized!
+VR: OpenVR Error! OpenVR failed initialization with error code VRInitError_IPC_ConnectFailed: "Connect to VR Server Failed (301)"!
  
-(Filename:  Line: 381)
+(Filename:  Line: 954)
 
-UnloadTime: 1.862462 ms
-Connected to lighthouse:LHR-0A80CF2C
+VR: OpenVR Error! OpenVR failed initialization with error code VRInitError_IPC_ConnectFailed: "Connect to VR Server Failed (301)"!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: 954)
 
+UnloadTime: 0.989306 ms
 Command line build/worker/UnityClient@Windows/UnityClient@Windows.exe +assemblyName local_assembly +engineType UnityClient +infraServicesUrl http://127.0.0.1:21000 +appName lofi -logfile external-default-client.log
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -167,7 +63,7 @@ AppName = lofi
 AssemblyName = local_assembly
 DeploymentId = 
 DeploymentTag = prod
-EngineId = UnityClient486ee3a3-9e61-4497-ab11-81585317afe7
+EngineId = UnityClient3380c582-91d3-4449-8db6-581bc1553ff4
 EnginePlatform = Client
 EntityCreationLimitPerFrame = 100
 InfraServiceUrl = http://127.0.0.1:21000
@@ -193,24 +89,24 @@ UsePrefabPooling = True
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Configuration.dll (this message is harmless)
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Configuration.dll (this message is harmless)
 ClientMetrics OS=Windows 10  (10.0.0) 64bit.
-Processor: type Intel(R) Core(TM) i7-4720HQ CPU @ 2.60GHz, cores 8.
-Graphics: id 5080, vendor 4318, name NVIDIA GeForce GTX 970M, size 3040.
-Memory: 16304.
+Processor: type Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz, cores 8.
+Graphics: id 5058, vendor 4318, name NVIDIA GeForce GTX 970, size 3072.
+Memory: 12249.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Runtime.Serialization.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Xml.Linq.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Data.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Transactions.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Mono.Data.Tds.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Mono.Security.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.ServiceModel.dll (this message is harmless)
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Runtime.Serialization.dll (this message is harmless)
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Xml.Linq.dll (this message is harmless)
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Data.dll (this message is harmless)
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Transactions.dll (this message is harmless)
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Mono.Data.Tds.dll (this message is harmless)
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Mono.Security.dll (this message is harmless)
+Platform assembly: D:\Github\temp\VRSpatialMadness\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.ServiceModel.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3db4 -> priority: 1 
-  Thread -> id: 4004 -> priority: 1 
+  Thread -> id: 2b44 -> priority: 1 
+  Thread -> id: 372c -> priority: 1 
 Bootstrap connected to SpatialOS...
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -219,142 +115,7 @@ Trying to spawn...
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Web.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.IdentityModel.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Security.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Messaging.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Web.Services.dll (this message is harmless)
-success
+Spawning Player succeeded
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-OpenVR Shutdown
- 
-(Filename:  Line: 815)
-
-Initialize engine version: 5.5.1f1 (88d00a7498cd)
-GfxDevice: creating device client; threaded=1
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 970M (ID=0x13d8)
-    Vendor:   NVIDIA
-    VRAM:     3040 MB
-    Driver:   20.19.15.4531
-Begin MonoManager ReloadAssembly
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.VR.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Generated.Code.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Generated.Code.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.Framework.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.Framework.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\log4net.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\log4net.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Newtonsoft.Json.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Newtonsoft.Json.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\protobuf-net.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\protobuf-net.dll into Unity Child Domain
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Threading.dll (this message is harmless)
-Loading C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Threading.dll into Unity Child Domain
-- Completed reload, in  0.062 seconds
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Xml.dll (this message is harmless)
-<RI> Initializing input.
-<RI> Input initialized.
-desktop: 1920x1080 60Hz; virtual: 9180x2700 at 0,0
-<RI> Initialized touch support.
-OpenVR initialized!
- 
-(Filename:  Line: 381)
-
-UnloadTime: 1.021630 ms
-Connected to lighthouse:LHR-0A80CF2C
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Command line build/worker/UnityClient@Windows/UnityClient@Windows.exe +assemblyName local_assembly +engineType UnityClient +infraServicesUrl http://127.0.0.1:21000 +appName lofi -logfile external-default-client.log
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-WorkerConfiguration settings
-AppName = lofi
-AssemblyName = local_assembly
-DeploymentId = 
-DeploymentTag = prod
-EngineId = UnityClientda5c6009-e38d-439d-84d7-37d361ac195b
-EnginePlatform = Client
-EntityCreationLimitPerFrame = 100
-InfraServiceUrl = http://127.0.0.1:21000
-Ip = 127.0.0.1
-LinkProtocol = RakNet
-Log4NetConfigXml = log4net-default.xml
-LoginToken = 
-MetaData = {  }
-Port = 7777
-ProtocolLoggingOnStartup = False
-ProtocolLogPrefix = protocol-
-ProtocolLogMaxFileBytes = 104857600
-RaknetHeartbeatTimeoutMillis = 60000
-ReceiveQueueCapacity = 32768
-SendQueueCapacity = 16384
-ShowDebugTraces = False
-SteamToken = 
-TcpMultiplexLevel = 32
-UseInstrumentation = True
-UsePerInstanceAssetCache = True
-UsePrefabPooling = True
-
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Configuration.dll (this message is harmless)
-ClientMetrics OS=Windows 10  (10.0.0) 64bit.
-Processor: type Intel(R) Core(TM) i7-4720HQ CPU @ 2.60GHz, cores 8.
-Graphics: id 5080, vendor 4318, name NVIDIA GeForce GTX 970M, size 3040.
-Memory: 16304.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Runtime.Serialization.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Xml.Linq.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Data.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Transactions.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Mono.Data.Tds.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\Mono.Security.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.ServiceModel.dll (this message is harmless)
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 4230 -> priority: 1 
-  Thread -> id: 422c -> priority: 1 
-Bootstrap connected to SpatialOS...
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Trying to spawn...
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Web.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.IdentityModel.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Security.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Messaging.dll (this message is harmless)
-Platform assembly: C:\VR\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Web.Services.dll (this message is harmless)
-success
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-OpenVR Shutdown
- 
-(Filename:  Line: 815)
 

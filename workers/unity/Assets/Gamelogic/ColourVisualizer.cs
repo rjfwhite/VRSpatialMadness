@@ -8,6 +8,7 @@ namespace Assets.Gamelogic
     public class ColourVisualizer : MonoBehaviour
     {
         [Require] private Colour.Reader colourReader;
+        public Vector3f Colour { get { return colourReader.Data.colour; } }
 
         private void OnEnable()
         {
@@ -30,7 +31,20 @@ namespace Assets.Gamelogic
 
         private void SetColour(Vector3f colour)
         {
-            GetComponent<Renderer>().material.color = new Color(colour.X, colour.Y, colour.Z);
+            var objectRenderer = GetComponent<Renderer>();
+            if (objectRenderer != null)
+            {
+                objectRenderer.material.color = new Color(colour.X, colour.Y, colour.Z);
+            }
+            
+            foreach (Transform childTransform in transform)
+            {
+                objectRenderer = childTransform.GetComponent<Renderer>();
+                if (objectRenderer != null)
+                {
+                    objectRenderer.material.color = new Color(colour.X, colour.Y, colour.Z);
+                }
+            }
         }
     }
 }

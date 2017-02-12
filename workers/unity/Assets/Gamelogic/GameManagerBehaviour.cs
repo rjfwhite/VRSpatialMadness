@@ -2,14 +2,14 @@
 using Improbable.Server;
 using Improbable.Unity.Core;
 using Improbable.Unity.Visualizer;
+using Improbable.Worker;
 using UnityEngine;
 
 namespace Assets.Gamelogic
 {
     class GameManagerBehaviour : MonoBehaviour
     {
-        [Require]
-        private GameManager.Writer GameManagerWriter;
+        [Require] private GameManager.Writer GameManagerWriter;
 
         private void OnEnable()
         {
@@ -19,10 +19,21 @@ namespace Assets.Gamelogic
         private void HandleSpawnPlayer(Improbable.Entity.Component.ResponseHandle<GameManager.Commands.SpawnPlayer, SpawnPlayerRequest, SpawnPlayerResponse> request)
         {
             Debug.Log("GOT REQUEST TO SPAWN PLAYER");
-            SpatialOS.WorkerCommands.CreateEntity("Player", EntityTemplateFactory.Player(new Improbable.Math.Coordinates(Random.RandomRange(-15, 15), 0, Random.RandomRange(-15, 15)), request.CallerInfo.CallerWorkerId), callback =>
+            int newTeamId = GameManagerWriter.Data.currentTeamId + 1;
+            GameManagerWriter.Send(new GameManager.Update().SetCurrentTeamId(newTeamId));
+
+            SpatialOS.WorkerCommands.CreateEntity("Player", EntityTemplateFactory.Player(new Improbable.Math.Coordinates(Random.Range(-15, 15), 0, Random.Range(-15, 15)), request.CallerInfo.CallerWorkerId, newTeamId), callback =>
+
             {
-                Debug.Log("SUCCESSFULLY SPAWNED PLAYER FOR " + request.CallerInfo.CallerWorkerId);
-                request.Respond(new SpawnPlayerResponse(request.CallerInfo.CallerWorkerId));
+                if (callback.StatusCode != StatusCode.Success)
+                {
+                    Debug.LogError("Spawning player failed on fsim " + callback.ErrorMessage);
+                }
+                else
+                {
+                    Debug.Log("SUCCESSFULLY SPAWNED PLAYER FOR " + request.CallerInfo.CallerWorkerId);
+                    request.Respond(new SpawnPlayerResponse(request.CallerInfo.CallerWorkerId));
+                }
             });
         }
 

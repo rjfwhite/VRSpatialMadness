@@ -1,0 +1,7 @@
+package improbable.player;
+
+component PlayerInfo {
+  id = 1101;
+  int32 health = 2;
+  int32 points = 3;
+}
