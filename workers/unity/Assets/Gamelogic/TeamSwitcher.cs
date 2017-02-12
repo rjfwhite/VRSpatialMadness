@@ -9,26 +9,21 @@ namespace Assets.Gamelogic
         [Require] private Team.Writer teamWriter;
         [Require] private Colour.Writer colourWriter;
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnEnable()
         {
-            if (teamWriter == null || colourWriter == null)
-            {
-                return;
-            }
-
-            var otherTeamVisualizer = collision.gameObject.GetComponent<TeamVisualizer>();
-            if (otherTeamVisualizer != null)
-            {
-                teamWriter.Send(new Team.Update().SetTeamId(otherTeamVisualizer.TeamId));
-            }
-
-            var otherColourVisualizer = collision.gameObject.GetComponent<ColourVisualizer>();
-            if (otherColourVisualizer != null)
-            {
-                colourWriter.Send(new Colour.Update().SetColour(otherColourVisualizer.Colour));
-            }
+            teamWriter.CommandReceiver.OnSwitchTeam += HandleSwitchTeam;
         }
 
-        
+        private void OnDisable()
+        {
+            teamWriter.CommandReceiver.OnSwitchTeam -= HandleSwitchTeam;
+        }
+
+        private void HandleSwitchTeam(Improbable.Entity.Component.ResponseHandle<Team.Commands.SwitchTeam, SwitchTeamRequest, SwitchTeamResponse> obj)
+        {
+            teamWriter.Send(new Team.Update().SetTeamId(obj.Request.teamId));
+            colourWriter.Send(new Colour.Update().SetColour(obj.Request.color));
+            obj.Respond(new SwitchTeamResponse());
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace Assets.EntityTemplates
             var entity = new SnapshotEntity { Prefab = "Player" };
 
             entity.Add(new Position.Data(position));
+            
             entity.Add(new Colour.Data(new Vector3f(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value)));
             entity.Add(new VivePlayer.Data(new ViveTransform(), new ViveTransform(), new ViveTransform()));
             entity.Add(new PlayerInfo.Data(10, 0));
