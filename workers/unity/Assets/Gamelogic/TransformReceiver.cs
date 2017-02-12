@@ -36,8 +36,7 @@ namespace Assets.Gamelogic
             
             if (update.position.HasValue)
             {
-                targetPosition = update.position.Value.ToVector3();
-                objectRigidBody.MovePosition(Vector3.Lerp(objectRigidBody.position, targetPosition, 0.2f));
+                objectRigidBody.position = update.position.Value.ToVector3();
             }
         }
     }

@@ -44,6 +44,15 @@ namespace Assets.Gamelogic
                 {
                     objectRenderer.material.color = new Color(colour.X, colour.Y, colour.Z);
                 }
+
+                foreach (Transform childchildTransform in childTransform)
+                {
+                    objectRenderer = childchildTransform.GetComponent<Renderer>();
+                    if (objectRenderer != null)
+                    {
+                        objectRenderer.material.color = new Color(colour.X, colour.Y, colour.Z);
+                    }
+                }
             }
         }
     }
