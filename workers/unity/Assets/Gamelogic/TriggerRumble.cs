@@ -14,10 +14,6 @@ namespace Assets.Gamelogic
         private void Awake()
         {
             playerInputBehaviour = GetComponentInParent<PlayerInputBehaviour>();
-            if (playerInputBehaviour == null)
-            {
-                Debug.LogError("ADDADAFAFAFFAA");
-            }
         }
 
         private void OnCollisionEnter(Collision collision)

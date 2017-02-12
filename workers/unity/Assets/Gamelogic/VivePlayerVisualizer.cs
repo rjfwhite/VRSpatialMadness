@@ -39,7 +39,7 @@ namespace Assets.Gamelogic
         private void SetViveTransform(ViveTransform spatialTransform, Transform unityTransform)
         {
             unityTransform.position = new Vector3((float)spatialTransform.position.X, (float)spatialTransform.position.Y, (float)spatialTransform.position.Z);
-            unityTransform.rotation = new UnityEngine.Quaternion(spatialTransform.rotation.x, spatialTransform.rotation.y, spatialTransform.rotation.z, spatialTransform.rotation.w);
+            unityTransform.rotation = new Quaternion(spatialTransform.rotation.x, spatialTransform.rotation.y, spatialTransform.rotation.z, spatialTransform.rotation.w);
         }
     }
 }
