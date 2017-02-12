@@ -4,6 +4,7 @@ using Improbable.Player;
 using Improbable.Unity.Core;
 using Improbable.Unity.Visualizer;
 using UnityEngine;
+using Valve.VR;
 
 namespace Assets.Gamelogic
 {
@@ -15,6 +16,7 @@ namespace Assets.Gamelogic
         private ColourVisualizer colourVisualizer;
         private TeamVisualizer teamVisualizer;
         private Vector3 lastLeftHandPosition;
+        private float movementSensitivity = 0.2f;
 
         private void Awake()
         {
@@ -44,18 +46,36 @@ namespace Assets.Gamelogic
             if (leftHandTrackedObject.index != SteamVR_TrackedObject.EIndex.None)
             {
                 var leftDevice = SteamVR_Controller.Input((int)leftHandTrackedObject.index);
+
+                // process trigger press
                 if (leftDevice.GetPressUp(SteamVR_Controller.ButtonMask.Trigger))
                 {
                     SpawnBall(leftHandTrackedObject.transform.position, leftHandVelocity);
+                    VibrateLeft();
+                }
+
+                // process touchpad
+                if (leftDevice.GetTouch(SteamVR_Controller.ButtonMask.Touchpad))
+                {
+                    ProcessMovement(leftDevice.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad));
                 }
             }
 
             if (rightHandTrackedObject.index != SteamVR_TrackedObject.EIndex.None)
             {
                 var rightDevice = SteamVR_Controller.Input((int)rightHandTrackedObject.index);
+
+                // process trigger press
                 if (rightDevice.GetPressUp(SteamVR_Controller.ButtonMask.Trigger))
                 {
                     SpawnBall(rightHandTrackedObject.transform.position, Vector3.zero);
+                    VibrateRight();
+                }
+
+                // process touchpad
+                if (rightDevice.GetTouch(SteamVR_Controller.ButtonMask.Touchpad))
+                {
+                    ProcessMovement(rightDevice.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad));
                 }
             }
         }
@@ -63,6 +83,47 @@ namespace Assets.Gamelogic
         private void SpawnBall(Vector3 position, Vector3 velocity)
         {
             SpatialOS.Commands.CreateEntity(vivePlayerWriter, "Ball", EntityTemplateFactory.Ball(new Coordinates(position.x, position.y, position.z), new Vector3f(velocity.x, velocity.y, velocity.z), colourVisualizer.Colour, Bootstrap.WorkerId, teamVisualizer.TeamId), callback => {});
+        }
+
+        private void ProcessMovement(Vector2 touchpad)
+        {
+            if (Mathf.Abs(touchpad.y) > movementSensitivity)
+            {
+                transform.position -= transform.forward * Time.deltaTime * (touchpad.y * 5f);
+            }
+
+            if (Mathf.Abs(touchpad.x) > movementSensitivity)
+            {
+                transform.Rotate(0, touchpad.x * 1f, 0);
+            }
+        }
+
+        public void VibrateLeft()
+        {
+            if (leftHandTrackedObject == null)
+            {
+                return;
+            }
+
+            if (leftHandTrackedObject.index != SteamVR_TrackedObject.EIndex.None)
+            {
+                var leftDevice = SteamVR_Controller.Input((int)leftHandTrackedObject.index);
+                leftDevice.TriggerHapticPulse(1000);
+            }
+        }
+
+        public void VibrateRight()
+        {
+            if (rightHandTrackedObject == null)
+            {
+                return;
+            }
+
+            if (rightHandTrackedObject.index != SteamVR_TrackedObject.EIndex.None)
+            {
+                var rightDevice = SteamVR_Controller.Input((int)rightHandTrackedObject.index);
+                rightDevice.TriggerHapticPulse(1000);
+            }
         }
     }
 }

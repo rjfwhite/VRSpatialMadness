@@ -42,6 +42,7 @@ namespace Assets.Gamelogic
             VivePlayerWriter.Send(update);
 
             GameObject.Find("/[CameraRig]").transform.position = transform.position;
+            GameObject.Find("/[CameraRig]").transform.rotation = transform.rotation;
         }
 
         private ViveTransform createViveTransform(Transform unityTransform)
