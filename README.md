@@ -1,27 +1,14 @@
-# BlankProject
+# VR Hackathon Project
 ---
 
-*Copyright Improbable 2016*
+Created as part of the Feburary 2017 Improbable SpatialOS hackathon. 
+Note - this is my own personal project, created over a very short period of time with a group of people. The code is of hackathon quality, but demonstrates using SpatialOS with SteamVR 
 
-- *GitHub Repository*: [github.com/spatialos/BlankProject](https://github.com/spatialos/BlankProject)
+Cool Things
+* The balls you spawn are actually fully authoritative on your client, so you should have a good experience with them!
 
----
+Issues
+* Other player balls will appear jerky - I was unable to fully implement a good distributed physics solution in time
 
-## Introduction
-
-This is a blank SpatialOS project that you can use to build your own SpatialOS application.
-
-It contains:
-
-* A SpatialOS project descriptor.
-* Unity worker
-* Bare-bones Launch Configurations for automatically and manually launching workers.
-* Bare-bones Client and Physics Scenes with a `Bootstrap.cs` file.
-* An example deployment configuration, `deploy.json`.
-* `.gitignore` files for a SpatialOS project.
-
-## Using the BlankProject
-
-[SpatialOS documentation](https://spatialos.improbable.io/docs/).
-
-To report bugs or to give feedback on this project, please contact SpatialOS Support.
+Cool Things I wish I had done
+* Adding code to move client authority on physics based upon whoever is closest would be awesome
